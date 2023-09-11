@@ -576,12 +576,17 @@ function uncompress(str) {
 
     while (index < final) {
         workStr = str[index];
+        console.log("Current Letter:", workStr)
         workNum = Number.parseInt(str[index+1]);
+        console.log("Working Number:", workNum);
         for(let i = 0; i <= index; i++) {
             buildStr += workStr
+            console.log("Build String:", buildStr);
         }
         outStr += buildStr;
+        console.log("Output String:", outStr);
         index += 2;
+        console.log("Next Index:", index);
     }
     return outStr;
 }
